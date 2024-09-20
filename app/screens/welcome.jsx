@@ -1,10 +1,14 @@
-import React from "react";
+import React,{useState} from "react";
 import { SafeAreaView, Modal, Text, View } from "react-native";
 import Clouds from '../../assets/img/clouds.svg';
 import Guy from '../../assets/img/guy.svg';
 import RoundButton from "../../components/Button";
+import { useNavigation } from "expo-router";
 
-const Welcome_Page = ({ navigation }) => {
+const Welcome_Page = () => {
+
+    const navigation = useNavigation();
+    
     return (
         <Modal visible={true} transparent={true}>
             <SafeAreaView className="bg-primaryGreen h-full">
@@ -32,7 +36,8 @@ const Welcome_Page = ({ navigation }) => {
                     </Text>
                     
                     {/* Buttons */}
-                    <RoundButton title="LOGIN" hollow={false} />
+                    <RoundButton title="LOGIN" hollow={false}
+                     onPress={() => navigation.navigate('Login')}/>
                     <Text></Text> 
                     <RoundButton title="REGISTER" hollow={true} />
                 </View>
