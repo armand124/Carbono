@@ -8,6 +8,8 @@ module.exports = {
       'bgWhite' : '#f6f6f6',
       'accent' : '#fdf1a9',
       'textColor' : '#30343f',
+      'gray' : '#cecece',
+      'darkGreen': '#075b42',
     },
     extend: {},
   },

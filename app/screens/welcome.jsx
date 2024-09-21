@@ -39,7 +39,8 @@ const Welcome_Page = () => {
                     <RoundButton title="LOGIN" hollow={false}
                      onPress={() => navigation.navigate('Login')}/>
                     <Text></Text> 
-                    <RoundButton title="REGISTER" hollow={true} />
+                    <RoundButton title="REGISTER" hollow={true}
+                    onPress={() => navigation.navigate('Register')} />
                 </View>
 
             </SafeAreaView>
