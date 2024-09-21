@@ -1,4 +1,4 @@
-import React,{useState} from "react";
+import React from "react";
 import { SafeAreaView, Modal, Text, View } from "react-native";
 import Clouds from '../../assets/img/clouds.svg';
 import Guy from '../../assets/img/guy.svg';

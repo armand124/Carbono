@@ -10,6 +10,7 @@ module.exports = {
       'textColor' : '#30343f',
       'gray' : '#cecece',
       'darkGreen': '#075b42',
+      'red' : '#ff4646',
     },
     extend: {},
   },

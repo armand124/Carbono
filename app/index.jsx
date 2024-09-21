@@ -4,26 +4,30 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import Welcome_Page from './screens/welcome';
 import LoginPage from './screens/login';
 import RegisterPage from './screens/register';
+import HomeScreen from './screens/home';
 const Stack = createNativeStackNavigator();
 
 const App = () => {
   return (
     <NavigationContainer independent={true} >
-      <Stack.Navigator screenOptions = {{headerShown:false}} initialRouteName='Welcome'>
-        <Stack.Group screenOptions={{presentation:'fullScreenModal'}}>
+      <Stack.Navigator screenOptions = {{animation:false, headerShown:false, presentation:'transparentModal'}} initialRouteName='Welcome'>
         <Stack.Screen 
           name='Welcome'
           component={Welcome_Page}
         />
-        <Stack.Screen
-          name='Login'
-          component={LoginPage}
-          />
           <Stack.Screen
             name='Register'
             component={RegisterPage}
             />
-          </Stack.Group>
+            <Stack.Screen
+          name='Login'
+          component={LoginPage}
+          />
+          <Stack.Screen
+          name='Home'
+          component={HomeScreen}
+          />
+        
       </Stack.Navigator>
     </NavigationContainer>
   );
